@@ -88,10 +88,10 @@ class _DrawerScreenState extends State<DrawerScreen> {
 
   Future<void> share() async {
     await FlutterShare.share(
-        title: 'Share',
+        title: 'Noukri Junction App ',
         // text: 'Example share text',
-        linkUrl: 'https://flutter.dev/',
-        chooserTitle: 'Example Chooser Title'
+        linkUrl: 'https://play.google.com/store/apps/details?id=com.naukri.user&hl=en-IN/',
+        chooserTitle: 'Noukri Junction App '
     );
   }
 

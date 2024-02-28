@@ -1370,6 +1370,46 @@ class _SeekerProfileDetailScreenState extends State<SeekerProfileDetailScreen> {
                   ),
                 ),
 
+                Padding(
+                  padding: const EdgeInsets.only(left: 15),
+                  child: Text("${getTranslated(context, 'gender')}", style: TextStyle(fontSize: 16, color: Colors.grey),),
+                ),
+                Row(
+                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Radio(
+                      activeColor: primaryColor,
+                      // title: Text("Male"),
+                      value: "male",
+                      groupValue: gender,
+                      onChanged: (value){
+                        setState(() {
+                          gender = value.toString();
+                        });
+                      },
+                    ),
+                    Text("${getTranslated(context, 'male')}", style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold, color: primaryColor),),
+                    Radio(
+                      activeColor: primaryColor,
+                      // title: Text("Female"),
+                      value: "female",
+                      groupValue: gender,
+                      onChanged: (value){
+                        setState(() {
+                          gender = value.toString();
+                        }
+                        );
+                      },
+                    ),
+                    Text("${getTranslated(context, 'female')}", style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold, color: primaryColor),),
+                  ],
+                ),
+
+                //  CustomTextFormField(label: "Year of Passing*", labelColor: greyColor2,fieldcontroller: yearOfPassingController,keyboardType: TextInputType.number,),
+                CustomTextFormField(label: "${getTranslated(context, 'age')}*", labelColor: greyColor2,fieldcontroller: ageController,keyboardType: TextInputType.number,),
+                CustomTextFormField(label: "${getTranslated(context, 'currentAddress')}*", labelColor: greyColor2,fieldcontroller:currentAddressController,),
+                SizedBox(height: 10,),
+
                 //CustomDropDownTextField(labelText: "Qualification*", buttonHintText: "Qualification",droplist: addJobDataModel!.data!.qualifications,selectedValue: selectedQualification,),
                 SizedBox(height: 10,),
                 Padding(
@@ -1780,45 +1820,7 @@ class _SeekerProfileDetailScreenState extends State<SeekerProfileDetailScreen> {
                   ),
                 ),
                 SizedBox(height: 10,),
-                Padding(
-                  padding: const EdgeInsets.only(left: 15),
-                  child: Text("${getTranslated(context, 'gender')}", style: TextStyle(fontSize: 16, color: Colors.grey),),
-                ),
-                Row(
-                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Radio(
-                      activeColor: primaryColor,
-                      // title: Text("Male"),
-                      value: "male",
-                      groupValue: gender,
-                      onChanged: (value){
-                        setState(() {
-                          gender = value.toString();
-                        });
-                      },
-                    ),
-                    Text("${getTranslated(context, 'male')}", style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold, color: primaryColor),),
-                    Radio(
-                      activeColor: primaryColor,
-                      // title: Text("Female"),
-                      value: "female",
-                      groupValue: gender,
-                      onChanged: (value){
-                        setState(() {
-                          gender = value.toString();
-                        }
-                        );
-                      },
-                    ),
-                    Text("${getTranslated(context, 'female')}", style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold, color: primaryColor),),
-                  ],
-                ),
 
-                //  CustomTextFormField(label: "Year of Passing*", labelColor: greyColor2,fieldcontroller: yearOfPassingController,keyboardType: TextInputType.number,),
-                CustomTextFormField(label: "${getTranslated(context, 'age')}*", labelColor: greyColor2,fieldcontroller: ageController,keyboardType: TextInputType.number,),
-                CustomTextFormField(label: "${getTranslated(context, 'currentAddress')}*", labelColor: greyColor2,fieldcontroller:currentAddressController,),
-                SizedBox(height: 10,),
                 // CustomTextFormField(label: "Current CTC*", labelColor: greyColor2,fieldcontroller: currentCTCController,),
                 // CustomTextFormField(label: "Expected CTC*", labelColor: greyColor2,fieldcontroller:expectedCtcController,),
 

@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:form_validator/form_validator.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart';
 import 'package:job_dekho_app/Services/api_path.dart';
